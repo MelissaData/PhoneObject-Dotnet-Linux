@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Name:    MelissaDataPhoneObjectLinuxNET
-# Purpose: Use the Melissa Updater to make the MelissaDataPhoneObjectLinuxNET sample usable
+# Name:    MelissaPhoneObjectLinuxDotnet
+# Purpose: Use the Melissa Updater to make the MelissaPhoneObjectLinuxDotnet code usable
 
 ######################### Constants ##########################
 
@@ -48,7 +48,7 @@ ProductName="DQ_PHONE_DATA"
 # Uses the location of the .sh file 
 # Modify this if you want to use 
 CurrentPath=$(pwd)
-ProjectPath="$CurrentPath/MelissaDataPhoneObjectLinuxNETSample"
+ProjectPath="$CurrentPath/MelissaPhoneObjectLinuxDotnet"
 BuildPath="$ProjectPath/Build"
 DataPath="$ProjectPath/Data"
 
@@ -123,8 +123,8 @@ CheckSOs()
 }
 
 ########################## Main ############################
-printf "\n=============== Sample of Melissa Data Phone Object ===============\n                    [ .NET | Linux | 64BIT ]\n"
-
+printf "\n===================== Melissa Data Phone Object ====================\n                    [ .NET | Linux | 64BIT ]\n"
+printf "\n=========================== BUILD PROJECT ==========================\n"
 # Get license (either from parameters or user input)
 if [ -z "$license" ];
 then
@@ -176,20 +176,20 @@ fi
 
 printf "\nAll file(s) have been downloaded/updated!\n"
 
-# Start sample
+# Start program
 # Build project
 printf "\n=========================== BUILD PROJECT ==========================\n"
 
 # Target frameworks net7.0, net5.0, netcoreapp3.1
 # Please comment out the version that you don't want to use and uncomment the one that you do want to use
-dotnet publish -f="net7.0" -c Release -o $BuildPath MelissaDataPhoneObjectLinuxNETSample/MelissaDataPhoneObjectLinuxNETSample.csproj
-#dotnet publish -f="net5.0" -c Release -o $BuildPath MelissaDataPhoneObjectLinuxNETSample/MelissaDataPhoneObjectLinuxNETSample.csproj
-#dotnet publish -f="netcoreapp3.1" -c Release -o $BuildPath MelissaDataPhoneObjectLinuxNETSample/MelissaDataPhoneObjectLinuxNETSample.csproj
+dotnet publish -f="net7.0" -c Release -o $BuildPath MelissaPhoneObjectLinuxDotnet/MelissaPhoneObjectLinuxDotnet.csproj
+#dotnet publish -f="net5.0" -c Release -o $BuildPath MelissaPhoneObjectLinuxDotnet/MelissaPhoneObjectLinuxDotnet.csproj
+#dotnet publish -f="netcoreapp3.1" -c Release -o $BuildPath MelissaPhoneObjectLinuxDotnet/MelissaPhoneObjectLinuxDotnet.csproj
 
 # Run project
 if [ -z "$phone" ];
 then
-    dotnet $BuildPath/MelissaDataPhoneObjectLinuxNETSample.dll --license $license  --dataPath $DataPath
+    dotnet $BuildPath/MelissaPhoneObjectLinuxDotnet.dll --license $license  --dataPath $DataPath
 else
-    dotnet $BuildPath/MelissaDataPhoneObjectLinuxNETSample.dll --license $license  --dataPath $DataPath --phone "$phone"
+    dotnet $BuildPath/MelissaPhoneObjectLinuxDotnet.dll --license $license  --dataPath $DataPath --phone "$phone"
 fi

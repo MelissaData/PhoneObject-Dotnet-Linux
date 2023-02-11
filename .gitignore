@@ -3,6 +3,11 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Phone Object
+[Mm]elissa[Uu]pdater/
+[Mm]elissa[Pp]hone[Oo]bject[Ll]inux[Dd]otnet/[Dd]ata
+[Mm]elissa[Pp]hone[Oo]bject[Ll]inux[Dd]otnet/[Bb]uild
+
 # User-specific files
 *.rsuser
 *.suo
