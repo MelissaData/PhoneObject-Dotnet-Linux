@@ -82,7 +82,7 @@ namespace MelissaPhoneObjectLinuxDotnet
 
         // Print user input
         Console.WriteLine("\n============================== INPUTS ==============================\n");
-        Console.WriteLine($"\t               Phone: {dataContainer.Phone}");
+        Console.WriteLine($"\t                Phone: {dataContainer.Phone}");
 
         // Execute Phone Object
         phoneObject.ExecuteObjectAndResultCodes(ref dataContainer);
@@ -91,15 +91,15 @@ namespace MelissaPhoneObjectLinuxDotnet
         Console.WriteLine("\n============================== OUTPUT ==============================\n");
         Console.WriteLine("\n\tPhone Object Information:");
 
-        Console.WriteLine($"\t     Area Code: {phoneObject.mdPhoneObj.GetAreaCode()}");
-        Console.WriteLine($"\t        Prefix: {phoneObject.mdPhoneObj.GetPrefix()}");
-        Console.WriteLine($"\t        Suffix: {phoneObject.mdPhoneObj.GetSuffix()}");
-        Console.WriteLine($"\t          City: {phoneObject.mdPhoneObj.GetCity()}");
-        Console.WriteLine($"\t         State: {phoneObject.mdPhoneObj.GetState()}");
-        Console.WriteLine($"\t      Latitude: {phoneObject.mdPhoneObj.GetLatitude()}");
-        Console.WriteLine($"\t     Longitude: {phoneObject.mdPhoneObj.GetLongitude()}");
-        Console.WriteLine($"\t     Time Zone: {phoneObject.mdPhoneObj.GetTimeZone()}");
-        Console.WriteLine($"\t  Result Codes: {dataContainer.ResultCodes}");
+        Console.WriteLine($"\t       Area Code: {phoneObject.mdPhoneObj.GetAreaCode()}");
+        Console.WriteLine($"\t          Prefix: {phoneObject.mdPhoneObj.GetPrefix()}");
+        Console.WriteLine($"\t          Suffix: {phoneObject.mdPhoneObj.GetSuffix()}");
+        Console.WriteLine($"\t            City: {phoneObject.mdPhoneObj.GetCity()}");
+        Console.WriteLine($"\t           State: {phoneObject.mdPhoneObj.GetState()}");
+        Console.WriteLine($"\t        Latitude: {phoneObject.mdPhoneObj.GetLatitude()}");
+        Console.WriteLine($"\t       Longitude: {phoneObject.mdPhoneObj.GetLongitude()}");
+        Console.WriteLine($"\t       Time Zone: {phoneObject.mdPhoneObj.GetTimeZone()}");
+        Console.WriteLine($"\t    Result Codes: {dataContainer.ResultCodes}");
 
         //Console.WriteLine($"\t New Area Code: {phoneObject.mdPhoneObj.GetNewAreaCode()}");
         //Console.WriteLine($"\t     Extension: {phoneObject.mdPhoneObj.GetExtension()}");
