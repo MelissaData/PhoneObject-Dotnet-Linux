@@ -173,7 +173,8 @@ namespace MelissaData {
 
 		public bool Lookup(string phone) {
 			Utf8String u_phone = new Utf8String(phone);
-			return (mdPhoneUnmanaged.mdPhoneLookup(i, u_phone.GetUtf8Ptr(), IntPtr.Zero) != 0);
+			Utf8String u_zip = new Utf8String("");
+			return (mdPhoneUnmanaged.mdPhoneLookup(i, u_phone.GetUtf8Ptr(), u_zip.GetUtf8Ptr()) != 0);
 		}
 
 		public bool CorrectAreaCode(string phone, string zip) {
@@ -480,12 +481,15 @@ namespace MelissaData {
 		public bool Lookup(string phone, string country) {
 			Utf8String u_phone = new Utf8String(phone);
 			Utf8String u_country = new Utf8String(country);
-			return (mdGlobalPhoneUnmanaged.mdGlobalPhoneLookup(i, u_phone.GetUtf8Ptr(), u_country.GetUtf8Ptr(), IntPtr.Zero) != 0);
+			Utf8String u_origcountry = new Utf8String("");
+			return (mdGlobalPhoneUnmanaged.mdGlobalPhoneLookup(i, u_phone.GetUtf8Ptr(), u_country.GetUtf8Ptr(), u_origcountry.GetUtf8Ptr()) != 0);
 		}
 
 		public bool Lookup(string phone) {
 			Utf8String u_phone = new Utf8String(phone);
-			return (mdGlobalPhoneUnmanaged.mdGlobalPhoneLookup(i, u_phone.GetUtf8Ptr(), IntPtr.Zero, IntPtr.Zero) != 0);
+			Utf8String u_country = new Utf8String("");
+			Utf8String u_origcountry = new Utf8String("");
+			return (mdGlobalPhoneUnmanaged.mdGlobalPhoneLookup(i, u_phone.GetUtf8Ptr(), u_country.GetUtf8Ptr(), u_origcountry.GetUtf8Ptr()) != 0);
 		}
 
 		public bool LookupNext() {
