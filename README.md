@@ -27,7 +27,7 @@ And return
 
 ## Tested Environments
 - Linux 64-bit .NET 7.0, Ubuntu 20.04.05 LTS
-- Melissa data files for 2024-09
+- Melissa data files for 2024-10
 
 ## Required File(s) and Programs
 
@@ -77,8 +77,8 @@ Once all of this is done, you should be able to verify that the SDK is installed
 
 #### Download this project
 ```
-$ git clone https://github.com/MelissaData/PhoneObject-Dotnet-Linux
-$ cd PhoneObject-Dotnet-Linux
+git clone https://github.com/MelissaData/PhoneObject-Dotnet-Linux
+cd PhoneObject-Dotnet-Linux
 ```
 
 #### Set up Melissa Updater 
@@ -134,25 +134,25 @@ When you have modified the script to match your data location, let's run the scr
 - Interactive 
 
 	The script will prompt the user for a phone number, then use the provided number to test Phone Object. For example:
-	```
-	$ ./MelissaPhoneObjectLinuxDotnet.sh
-	```
+  ```
+  ./MelissaPhoneObjectLinuxDotnet.sh
+  ```
   For quiet mode:
   ```
-  $ ./MelissaPhoneObjectLinuxDotnet.sh --quiet
+  ./MelissaPhoneObjectLinuxDotnet.sh --quiet
   ```
 - Command Line 
 
 	You can pass a phone number in ```--phone``` parameter and a license string in ```--license``` parameter to test Phone Object. For example:
-	```
-    $ ./MelissaPhoneObjectLinuxDotnet.sh --phone "800-635-4772" 
-    $ ./MelissaPhoneObjectLinuxDotnet.sh --phone "800-635-4772" --license "<your_license_string>"
-    ```
+  ```
+  ./MelissaPhoneObjectLinuxDotnet.sh --phone "800-635-4772" 
+  ./MelissaPhoneObjectLinuxDotnet.sh --phone "800-635-4772" --license "<your_license_string>"
+  ```
 	For quiet mode:
-    ```
-    $ ./MelissaPhoneObjectLinuxDotnet.sh --phone "800-635-4772" --quiet
-    $ ./MelissaPhoneObjectLinuxDotnet.sh --phone "800-635-4772" --license "<your_license_string>" --quiet
-    ```
+  ```
+  ./MelissaPhoneObjectLinuxDotnet.sh --phone "800-635-4772" --quiet
+  ./MelissaPhoneObjectLinuxDotnet.sh --phone "800-635-4772" --license "<your_license_string>" --quiet
+  ```
 This is the expected output from a successful setup for interactive mode:
 
 ![alt text](/screenshots/output.jpg)
